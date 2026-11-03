@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmodelg.a CMakeFiles/modelg.dir/measurer.cxx.o CMakeFiles/modelg.dir/measurer_output.cxx.o CMakeFiles/modelg.dir/Stepper.cxx.o CMakeFiles/modelg.dir/NoiseGenerator.cxx.o CMakeFiles/modelg.dir/initialize.cxx.o
+/usr/bin/ranlib libmodelg.a

@@ -1,0 +1,1 @@
+/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx -O3 -DNDEBUG -L/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-int64/lib -lpetsc -lhdf5 -L/software/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib -lfftw3 CMakeFiles/SuperPions.exe.dir/SuperPions.cxx.o -o SuperPions.exe  libmodelg.a -lpetsc -lhdf5 -lfftw3 

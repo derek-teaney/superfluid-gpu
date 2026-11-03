@@ -46,6 +46,10 @@ class ModelGExplicitDiffusionStep : public Stepper {
 public:
   ModelGExplicitDiffusionStep(ModelA &in);
   bool step(const double &dt) override;
+  // Diffusion step on an external vector (does not touch model->solution).
+  // With preserve_norm = false, phi is not renormalized to |phi| = f
+  // afterwards (simple dissipation instead of dissipation on the sphere).
+  bool step_on(const double &dt, Vec &vec, bool preserve_norm = true);
   void finalize() override { ; }
   ~ModelGExplicitDiffusionStep() { ; }
 

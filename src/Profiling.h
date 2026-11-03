@@ -43,13 +43,26 @@ private:
   }
 };
 
+#ifdef SFGPU_KOKKOS
+// One kernel instead of DMGlobalToLocal for a single rank with periodic
+// boundaries and Kokkos vectors (Stepper.cxx); *done says whether it applied
+PetscErrorCode ghost_fill_periodic_kokkos(DM da, Vec global, Vec local,
+                                          PetscBool *done);
+#endif
+
 // Fills the ghost cells of local from global, logged as GhostExchange.
 inline PetscErrorCode ghost_exchange(DM da, Vec global, Vec local) {
   const auto &prof = Profiling::get();
   PetscFunctionBeginUser;
   PetscCall(PetscLogEventBegin(prof.ghost_exchange, 0, 0, 0, 0));
-  PetscCall(DMGlobalToLocalBegin(da, global, INSERT_VALUES, local));
-  PetscCall(DMGlobalToLocalEnd(da, global, INSERT_VALUES, local));
+  PetscBool done = PETSC_FALSE;
+#ifdef SFGPU_KOKKOS
+  PetscCall(ghost_fill_periodic_kokkos(da, global, local, &done));
+#endif
+  if (!done) {
+    PetscCall(DMGlobalToLocalBegin(da, global, INSERT_VALUES, local));
+    PetscCall(DMGlobalToLocalEnd(da, global, INSERT_VALUES, local));
+  }
   PetscCall(PetscLogEventEnd(prof.ghost_exchange, 0, 0, 0, 0));
   PetscFunctionReturn(PETSC_SUCCESS);
 }

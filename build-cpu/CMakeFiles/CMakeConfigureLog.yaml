@@ -1,0 +1,288 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      The system is: Linux - 5.14.0-570.140.1.el9_6.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/CMakeFiles/3.26.5/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/CMakeFiles/CMakeScratch/TryCompile-IN1LGF"
+      binary: "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/CMakeFiles/CMakeScratch/TryCompile-IN1LGF"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/CMakeFiles/CMakeScratch/TryCompile-IN1LGF
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ceacf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ceacf.dir/build.make CMakeFiles/cmTC_ceacf.dir/build
+        gmake[1]: Entering directory '/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/CMakeFiles/CMakeScratch/TryCompile-IN1LGF'
+        Building CXX object CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o
+        /software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx   -v -o CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/opt/bwhpc/common/compiler/gnu/14.2.0/bin/g++
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../configure --prefix=/opt/bwhpc/common/compiler/gnu/14.2.0 --libdir=/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --enable-languages=c,c++,jit,lto,fortran,go --enable-host-shared --disable-multilib --enable-lto --with-system-zlib --enable-gnu-unique-object --enable-linker-build-id --with-gmp-lib=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --with-gmp-include=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/include --with-mpfr=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0 --with-mpc-lib=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --with-isl=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0 --enable-offload-targets=nvptx-none
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ceacf.dir/'
+         /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -I /software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include -iprefix /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/ -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ceacf.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /scratch/ccV4FUuX.s
+        GNU C++17 (GCC) version 14.2.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0"
+        ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu"
+        ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/backward"
+        ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include"
+        ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed"
+        ignoring nonexistent directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include
+         /software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/include
+         /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0
+         /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu
+         /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/backward
+         /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include
+         /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed
+         /usr/local/include
+         /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../include
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 477f68c191828dffdff14ad0f3fadab6
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ceacf.dir/'
+         as -v -I /software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include --64 -o CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o /scratch/ccV4FUuX.s
+        GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-63.el9_6.1
+        COMPILER_PATH=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_ceacf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ceacf.dir/link.txt --verbose=1
+        /software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx  -v CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ceacf 
+        Using built-in specs.
+        COLLECT_GCC=/opt/bwhpc/common/compiler/gnu/14.2.0/bin/g++
+        COLLECT_LTO_WRAPPER=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../configure --prefix=/opt/bwhpc/common/compiler/gnu/14.2.0 --libdir=/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --enable-languages=c,c++,jit,lto,fortran,go --enable-host-shared --disable-multilib --enable-lto --with-system-zlib --enable-gnu-unique-object --enable-linker-build-id --with-gmp-lib=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --with-gmp-include=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/include --with-mpfr=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0 --with-mpc-lib=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --with-isl=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0 --enable-offload-targets=nvptx-none
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        COMPILER_PATH=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ceacf' '-I' '/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include' '-L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ceacf.'
+         /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/scratch/cc8xTuhw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ceacf /lib/../lib64/crt1.o /lib/../lib64/crti.o /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib -L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0 -L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc -L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib -L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o -lmpi -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ceacf' '-I' '/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include' '-L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ceacf.'
+        gmake[1]: Leaving directory '/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/CMakeFiles/CMakeScratch/TryCompile-IN1LGF'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include]
+          add: [/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/include]
+          add: [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0]
+          add: [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu]
+          add: [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/backward]
+          add: [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include]
+          add: [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed]
+          add: [/usr/local/include]
+          add: [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include] ==> [/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include]
+        collapse include dir [/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/include] ==> [/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/include]
+        collapse include dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/include/c++/14.2.0]
+        collapse include dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/include/c++/14.2.0/x86_64-pc-linux-gnu]
+        collapse include dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/backward] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/include/c++/14.2.0/backward]
+        collapse include dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include]
+        collapse include dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../include] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include;/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/include;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/include/c++/14.2.0;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/include/c++/14.2.0/x86_64-pc-linux-gnu;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/include/c++/14.2.0/backward;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed;/usr/local/include;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/CMakeFiles/CMakeScratch/TryCompile-IN1LGF]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ceacf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ceacf.dir/build.make CMakeFiles/cmTC_ceacf.dir/build]
+        ignore line: [gmake[1]: Entering directory '/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/CMakeFiles/CMakeScratch/TryCompile-IN1LGF']
+        ignore line: [Building CXX object CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx   -v -o CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/bwhpc/common/compiler/gnu/14.2.0/bin/g++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../configure --prefix=/opt/bwhpc/common/compiler/gnu/14.2.0 --libdir=/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --enable-languages=c c++ jit lto fortran go --enable-host-shared --disable-multilib --enable-lto --with-system-zlib --enable-gnu-unique-object --enable-linker-build-id --with-gmp-lib=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --with-gmp-include=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/include --with-mpfr=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0 --with-mpc-lib=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --with-isl=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0 --enable-offload-targets=nvptx-none]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ceacf.dir/']
+        ignore line: [ /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -I /software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include -iprefix /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/ -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ceacf.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /scratch/ccV4FUuX.s]
+        ignore line: [GNU C++17 (GCC) version 14.2.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0"]
+        ignore line: [ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu"]
+        ignore line: [ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/backward"]
+        ignore line: [ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include"]
+        ignore line: [ignoring duplicate directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include]
+        ignore line: [ /software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/include]
+        ignore line: [ /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0]
+        ignore line: [ /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/x86_64-pc-linux-gnu]
+        ignore line: [ /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../include/c++/14.2.0/backward]
+        ignore line: [ /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include]
+        ignore line: [ /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/../../include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 477f68c191828dffdff14ad0f3fadab6]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ceacf.dir/']
+        ignore line: [ as -v -I /software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include --64 -o CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o /scratch/ccV4FUuX.s]
+        ignore line: [GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-63.el9_6.1]
+        ignore line: [COMPILER_PATH=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_ceacf]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ceacf.dir/link.txt --verbose=1]
+        ignore line: [/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx  -v CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ceacf ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/bwhpc/common/compiler/gnu/14.2.0/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../configure --prefix=/opt/bwhpc/common/compiler/gnu/14.2.0 --libdir=/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --enable-languages=c c++ jit lto fortran go --enable-host-shared --disable-multilib --enable-lto --with-system-zlib --enable-gnu-unique-object --enable-linker-build-id --with-gmp-lib=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --with-gmp-include=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/include --with-mpfr=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0 --with-mpc-lib=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0/lib64 --with-isl=/home/es/es_es/es_rakeller/WORK/BWHPC-S5/bwhpc-rpmbuild-svn/BUILD/gcc-14.2.0/opt/bwhpc/common/compiler/gnu/14.2.0 --enable-offload-targets=nvptx-none]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib/:/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ceacf' '-I' '/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include' '-L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ceacf.']
+        link line: [ /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/scratch/cc8xTuhw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ceacf /lib/../lib64/crt1.o /lib/../lib64/crti.o /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib -L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0 -L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc -L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib -L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o -lmpi -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/scratch/cc8xTuhw.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_ceacf] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o] ==> obj [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o]
+          arg [-L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib] ==> dir [/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib]
+          arg [-L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0] ==> dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0]
+          arg [-L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc] ==> dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc]
+          arg [-L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64] ==> dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib] ==> dir [/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib]
+          arg [-L/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../..] ==> dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../..]
+          arg [CMakeFiles/cmTC_ceacf.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lmpi] ==> lib [mpi]
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o] ==> obj [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o]
+        collapse obj [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib] ==> [/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib]
+        collapse library dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0]
+        collapse library dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc]
+        collapse library dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib] ==> [/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib]
+        collapse library dir [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.0/../../..] ==> [/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64]
+        implicit libs: [mpi;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc/x86_64-pc-linux-gnu/14.2.0;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64/gcc;/pfs/data6/software_uc3/bwhpc/common/compiler/gnu/14.2.0/lib64;/lib64;/usr/lib64;/opt/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/lib]
+        implicit fwks: []
+      
+      
+...

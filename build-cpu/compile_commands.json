@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/src",
+  "command": "/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx  -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-int64/include -I/software/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/modelg.dir/measurer.cxx.o -c /pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/measurer.cxx",
+  "file": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/measurer.cxx",
+  "output": "src/CMakeFiles/modelg.dir/measurer.cxx.o"
+},
+{
+  "directory": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/src",
+  "command": "/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx  -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-int64/include -I/software/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/modelg.dir/measurer_output.cxx.o -c /pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/measurer_output.cxx",
+  "file": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/measurer_output.cxx",
+  "output": "src/CMakeFiles/modelg.dir/measurer_output.cxx.o"
+},
+{
+  "directory": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/src",
+  "command": "/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx  -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-int64/include -I/software/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/modelg.dir/Stepper.cxx.o -c /pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/Stepper.cxx",
+  "file": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/Stepper.cxx",
+  "output": "src/CMakeFiles/modelg.dir/Stepper.cxx.o"
+},
+{
+  "directory": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/src",
+  "command": "/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx  -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-int64/include -I/software/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/modelg.dir/NoiseGenerator.cxx.o -c /pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/NoiseGenerator.cxx",
+  "file": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/NoiseGenerator.cxx",
+  "output": "src/CMakeFiles/modelg.dir/NoiseGenerator.cxx.o"
+},
+{
+  "directory": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/src",
+  "command": "/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx  -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-int64/include -I/software/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/modelg.dir/initialize.cxx.o -c /pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/initialize.cxx",
+  "file": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/initialize.cxx",
+  "output": "src/CMakeFiles/modelg.dir/initialize.cxx.o"
+},
+{
+  "directory": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu/src",
+  "command": "/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpicxx  -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/build-cpu -I/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-int64/include -I/software/bwhpc/common/numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/SuperPions.exe.dir/SuperPions.cxx.o -c /pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/SuperPions.cxx",
+  "file": "/pfs/work9/workspace/scratch/hd_pn277-super/superfluid-gpu/src/SuperPions.cxx",
+  "output": "src/CMakeFiles/SuperPions.exe.dir/SuperPions.cxx.o"
+}
+]

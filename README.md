@@ -33,3 +33,8 @@ You need to setup the perlmuttter environment
 source platforms/perlmutter/setupprlm.sh
 ```
 More detailed instructions are in Perlmutter.md
+
+## Building on other machines
+
+See `platforms/PORTING.md` for how to set up the dependencies on a new cluster
+(bwUniCluster 3.0 example in `platforms/bwuni3/`).

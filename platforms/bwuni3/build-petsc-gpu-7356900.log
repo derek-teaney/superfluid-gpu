@@ -1,0 +1,1498 @@
+
+Currently Loaded Modules:
+  1) compiler/gnu/14.2          3) numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0
+  2) mpi/openmpi/5.0-gnu-14.2   4) devel/cuda/12.8
+
+ 
+
+CUDA_HOME=/opt/bwhpc/common/devel/cuda/12.8
+GPU 0: NVIDIA H100 (UUID: GPU-441368fd-48e0-3e4d-3e1e-01649b0a598f)
+== configure  Tue Sep 29 04:18:11 PM CEST 2026
+=============================================================================================
+                         Configuring PETSc to compile on your system
+=============================================================================================
+=============================================================================================
+  Trying to download
+  /pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/pkgs/hdf5-1.14.6.tar.gz for HDF5
+=============================================================================================/usr/lib64/python3.9/tarfile.py:2288: RuntimeWarning: The default behavior of tarfile extraction has been changed to disallow common exploits (including CVE-2007-4559). By default, absolute/parent paths are disallowed and some mode bits are cleared. See https://access.redhat.com/articles/7004769 for more details.
+  warnings.warn(
+
+=============================================================================================
+                  Configuring HDF5 with CMake; this may take several minutes
+=============================================================================================
+=============================================================================================
+                 Compiling and installing HDF5; this may take several minutes
+=============================================================================================
+=============================================================================================
+  Trying to download
+  /pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/pkgs/kokkos-5.1.0.tar.gz for
+  KOKKOS
+=============================================================================================
+=============================================================================================
+                 Configuring KOKKOS with CMake; this may take several minutes
+=============================================================================================
+=============================================================================================
+                Compiling and installing KOKKOS; this may take several minutes
+=============================================================================================
+=============================================================================================
+  Trying to download
+  /pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/pkgs/f2cblaslapack-3.8.0.q2.tar.gz
+  for F2CBLASLAPACK
+=============================================================================================
+=============================================================================================
+                    Compiling F2CBLASLAPACK; this may take several minutes
+=============================================================================================
+=============================================================================================
+                   Installing F2CBLASLAPACK; this may take several minutes
+=============================================================================================
+=============================================================================================
+  Trying to download
+  /pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/pkgs/kokkos-kernels-5.1.0.tar.gz
+  for KOKKOS-KERNELS
+=============================================================================================/usr/lib64/python3.9/tarfile.py:2288: RuntimeWarning: The default behavior of tarfile extraction has been changed to disallow common exploits (including CVE-2007-4559). By default, absolute/parent paths are disallowed and some mode bits are cleared. See https://access.redhat.com/articles/7004769 for more details.
+  warnings.warn(
+
+=============================================================================================
+             Configuring KOKKOS-KERNELS with CMake; this may take several minutes
+=============================================================================================
+=============================================================================================
+            Compiling and installing KOKKOS-KERNELS; this may take several minutes
+=============================================================================================
+Compilers:
+  C Compiler:  mpicc  -fPIC -Wall -Wwrite-strings -Wno-unknown-pragmas -Wno-lto-type-mismatch -Wno-stringop-overflow -fstack-protector -fvisibility=hidden -O3  -fopenmp
+    Version: gcc (GCC) 14.2.0
+  CUDA Compiler:  /opt/bwhpc/common/devel/cuda/12.8/bin/nvcc  -ccbin mpicxx -std=c++20 -Xcompiler -fPIC -Xcompiler -fvisibility=hidden -O3 -gencode arch=compute_90,code=sm_90 
+    Version: Cuda compilation tools, release 12.8, V12.8.61
+  C++ Compiler:  mpicxx  -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -Wno-psabi -Wno-lto-type-mismatch -fstack-protector -fvisibility=hidden -O3  -std=gnu++20 -fPIC  -fopenmp
+    Version: g++ (GCC) 14.2.0
+Linkers:
+  Shared linker:   mpicc  -fopenmp -shared  -fPIC -Wall -Wwrite-strings -Wno-unknown-pragmas -Wno-lto-type-mismatch -Wno-stringop-overflow -fstack-protector -fvisibility=hidden -O3
+  Dynamic linker:   mpicc  -fopenmp -shared  -fPIC -Wall -Wwrite-strings -Wno-unknown-pragmas -Wno-lto-type-mismatch -Wno-stringop-overflow -fstack-protector -fvisibility=hidden -O3
+  Libraries linked against:   -lquadmath 
+Intel instruction sets found on CPU:
+  AVX2
+  AVX512: avx512f avx512dq avx512ifma avx512cd avx512bw avx512vl avx512_bf16 avx512vbmi avx512_vbmi2 avx512_vnni avx512_bitalg avx512_vpopcntdq
+Python:
+  Executable: /usr/bin/python3
+BlasLapack:
+  Libraries:  -Wl,-rpath,/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -L/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -lf2clapack -lf2cblas
+  uses 4 byte integers
+MPI:
+  Version:    3
+  mpiexec: /software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpiexec
+  Implementation: openmpi
+  MPI C++ include paths: -I/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include 
+  MPI C++ libraries: -L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib  -lmpi 
+  OMPI_VERSION: 5.0.8
+CUDA:
+  Version:    12.8
+  Includes:   -I/opt/bwhpc/common/devel/cuda/12.8/include
+  Libraries:  -Wl,-rpath,/opt/bwhpc/common/devel/cuda/12.8/lib64 -L/opt/bwhpc/common/devel/cuda/12.8/lib64 -L/opt/bwhpc/common/devel/cuda/12.8/lib64/stubs -lcudart -lnvToolsExt -lcufft -lcublas -lcusparse -lcusolver -lcurand -lcuda -lnvidia-ml
+  CUDA SM 90
+  CUDA underlying compiler: CUDA_CXX=mpicxx
+  CUDA underlying compiler flags: CUDA_CXXFLAGS=-Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -Wno-psabi -Wno-lto-type-mismatch -fstack-protector -fvisibility=hidden
+  CUDA underlying linker libraries: CUDA_CXXLIBS=
+X:
+  Libraries:  -lX11
+f2cblaslapack:
+OpenMP:
+  Version:    201511
+pthread:
+CMake:
+  Version:    3.26.5
+  Executable: /usr/bin/cmake
+HDF5:
+  Version:    1.14.6
+  Includes:   -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/include
+  Libraries:  -Wl,-rpath,/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -L/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -lhdf5_hl -lhdf5
+Bison:
+  Version:    3.7
+  Executable: /usr/bin/bison
+kokkos:
+  Version:    5.1.0
+  Includes:   -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/include
+  Libraries:  -Wl,-rpath,/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -L/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -lkokkoscontainers -lkokkoscore -lkokkossimd
+  Backends: ['Serial', 'OpenMP', 'CUDA']
+kokkos-kernels:
+  Version:    5.1.0
+  Includes:   -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/include
+  Libraries:  -Wl,-rpath,/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -L/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -lkokkoskernels
+PETSc:
+  Language used to compile PETSc: C
+  Language used to compile PetscDevice: Cxx
+  PETSC_ARCH: arch-bwuni3-h100-int64
+  PETSC_DIR: /pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5
+  Prefix: /home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64
+  Scalar type: real
+  Precision: double
+  Support for __float128
+  Integer size: 8 bytes
+  Single library: yes
+  Shared libraries: yes
+  Memory alignment from malloc(): 16 bytes
+  Using GNU make: /usr/bin/make
+xxx=======================================================================================xxx
+ Configure stage complete. Now build PETSc libraries with:
+   make PETSC_DIR=/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5 PETSC_ARCH=arch-bwuni3-h100-int64 all
+xxx=======================================================================================xxx
+== make all  Tue Sep 29 04:26:39 PM CEST 2026
+/usr/bin/python3 ./config/gmakegen.py --petsc-arch=arch-bwuni3-h100-int64
+==========================================
+ 
+See documentation/faq.html and documentation/bugreporting.html
+for help with installation problems. Please send EVERYTHING
+printed out below when reporting problems. Please check the
+mailing list archives and consider subscribing.
+ 
+  https://petsc.org/release/community/mailing/
+ 
+==========================================
+Starting make run on uc3n074.localdomain at Tue, 29 Sep 2026 16:26:41 +0200
+Machine characteristics: Linux uc3n074.localdomain 5.14.0-570.140.1.el9_6.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Sep 7 09:47:52 EDT 2026 x86_64 x86_64 x86_64 GNU/Linux
+-----------------------------------------
+Using PETSc directory: /pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5
+Using PETSc arch: arch-bwuni3-h100-int64
+-----------------------------------------
+PETSC_VERSION_RELEASE    1
+PETSC_VERSION_MAJOR      3
+PETSC_VERSION_MINOR      25
+PETSC_VERSION_SUBMINOR   5
+PETSC_VERSION_DATE       "Aug 30, 2026"
+PETSC_VERSION_GIT        "v3.25.5"
+PETSC_VERSION_DATE_GIT   "2026-08-30 07:59:06 -0500"
+-----------------------------------------
+Using configure Options: --prefix=/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64 --with-cc=mpicc --with-cxx=mpicxx --with-fc=0 --with-64-bit-indices --with-debugging=0 --with-cuda --with-cuda-dir=/opt/bwhpc/common/devel/cuda/12.8 --with-cuda-arch=90 --with-openmp --download-kokkos=/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/pkgs/kokkos-5.1.0.tar.gz --download-kokkos-kernels=/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/pkgs/kokkos-kernels-5.1.0.tar.gz --download-f2cblaslapack=/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/pkgs/f2cblaslapack-3.8.0.q2.tar.gz --download-hdf5=/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/pkgs/hdf5-1.14.6.tar.gz --with-make-np=48 COPTFLAGS=-O3 CXXOPTFLAGS=-O3 CUDAOPTFLAGS=-O3
+Using configuration flags:
+#define PETSC_ARCH ""
+#define PETSC_ATTRIBUTEALIGNED(size) __attribute((aligned(size)))
+#define PETSC_BLASLAPACK_UNDERSCORE 1
+#define PETSC_CLANGUAGE_C 1
+#define PETSC_CXX_RESTRICT __restrict
+#define PETSC_DEPRECATED_ENUM_BASE(string_literal_why) __attribute__((deprecated(string_literal_why)))
+#define PETSC_DEPRECATED_FUNCTION_BASE(string_literal_why) __attribute__((deprecated(string_literal_why)))
+#define PETSC_DEPRECATED_MACRO_BASE(string_literal_why) PETSC_DEPRECATED_MACRO_BASE_(GCC warning string_literal_why)
+#define PETSC_DEPRECATED_MACRO_BASE_(why) _Pragma(#why)
+#define PETSC_DEPRECATED_OBJECT_BASE(string_literal_why) __attribute__((deprecated(string_literal_why)))
+#define PETSC_DEPRECATED_TYPEDEF_BASE(string_literal_why) __attribute__((deprecated(string_literal_why)))
+#define PETSC_DEVICELANGUAGE_CXX 1
+#define PETSC_DIR "/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64"
+#define PETSC_DIR_SEPARATOR '/'
+#define PETSC_FUNCTION_NAME_C __func__
+#define PETSC_FUNCTION_NAME_CXX __func__
+#define PETSC_HAVE_ACCESS 1
+#define PETSC_HAVE_ATOLL 1
+#define PETSC_HAVE_ATTRIBUTEALIGNED 1
+#define PETSC_HAVE_BUILTIN_EXPECT 1
+#define PETSC_HAVE_BZERO 1
+#define PETSC_HAVE_C99_COMPLEX 1
+#define PETSC_HAVE_CLOCK 1
+#define PETSC_HAVE_CUDA 1
+#define PETSC_HAVE_CUDA_DIALECT_CXX11 1
+#define PETSC_HAVE_CUDA_DIALECT_CXX14 1
+#define PETSC_HAVE_CUDA_DIALECT_CXX17 1
+#define PETSC_HAVE_CUDA_DIALECT_CXX20 1
+#define PETSC_HAVE_CUDA_VERSION_11PLUS 1
+#define PETSC_HAVE_CUDA_VERSION_12_2PLUS 1
+#define PETSC_HAVE_CUPM 1
+#define PETSC_HAVE_CXX 1
+#define PETSC_HAVE_CXXABI_H 1
+#define PETSC_HAVE_CXX_ATOMIC 1
+#define PETSC_HAVE_CXX_COMPLEX 1
+#define PETSC_HAVE_CXX_COMPLEX_FIX 1
+#define PETSC_HAVE_CXX_DIALECT_CXX11 1
+#define PETSC_HAVE_CXX_DIALECT_CXX14 1
+#define PETSC_HAVE_CXX_DIALECT_CXX17 1
+#define PETSC_HAVE_CXX_DIALECT_CXX20 1
+#define PETSC_HAVE_DEVICE 1
+#define PETSC_HAVE_DLADDR 1
+#define PETSC_HAVE_DLCLOSE 1
+#define PETSC_HAVE_DLERROR 1
+#define PETSC_HAVE_DLFCN_H 1
+#define PETSC_HAVE_DLOPEN 1
+#define PETSC_HAVE_DLSYM 1
+#define PETSC_HAVE_DOUBLE_ALIGN_MALLOC 1
+#define PETSC_HAVE_DRAND48 1
+#define PETSC_HAVE_DYNAMIC_LIBRARIES 1
+#define PETSC_HAVE_ERF 1
+#define PETSC_HAVE_EXECUTABLE_EXPORT 1
+#define PETSC_HAVE_F2CBLASLAPACK 1
+#define PETSC_HAVE_FCNTL_H 1
+#define PETSC_HAVE_FENV_H 1
+#define PETSC_HAVE_FE_VALUES 1
+#define PETSC_HAVE_FLOAT_H 1
+#define PETSC_HAVE_FORK 1
+#define PETSC_HAVE_GETCWD 1
+#define PETSC_HAVE_GETDOMAINNAME 1
+#define PETSC_HAVE_GETHOSTBYNAME 1
+#define PETSC_HAVE_GETHOSTNAME 1
+#define PETSC_HAVE_GETPAGESIZE 1
+#define PETSC_HAVE_GETRUSAGE 1
+#define PETSC_HAVE_HDF5 1
+#define PETSC_HAVE_IMMINTRIN_H 1
+#define PETSC_HAVE_INTTYPES_H 1
+#define PETSC_HAVE_ISINF 1
+#define PETSC_HAVE_ISNAN 1
+#define PETSC_HAVE_ISNORMAL 1
+#define PETSC_HAVE_KOKKOS 1
+#define PETSC_HAVE_KOKKOS_KERNELS 1
+#define PETSC_HAVE_LGAMMA 1
+#define PETSC_HAVE_LINUX 1
+#define PETSC_HAVE_LOG2 1
+#define PETSC_HAVE_LSEEK 1
+#define PETSC_HAVE_MACRO_KOKKOS_ENABLE_CUDA 1
+#define PETSC_HAVE_MALLOC_H 1
+#define PETSC_HAVE_MEMMOVE 1
+#define PETSC_HAVE_MKSTEMP 1
+#define PETSC_HAVE_MPIEXEC_ENVIRONMENTAL_VARIABLE OMP
+#define PETSC_HAVE_MPIIO 1
+#define PETSC_HAVE_MPI_COMBINER_CONTIGUOUS 1
+#define PETSC_HAVE_MPI_COMBINER_DUP 1
+#define PETSC_HAVE_MPI_COMBINER_NAMED 1
+#define PETSC_HAVE_MPI_COUNT 1
+#define PETSC_HAVE_MPI_FEATURE_DYNAMIC_WINDOW 1
+#define PETSC_HAVE_MPI_GET_ACCUMULATE 1
+#define PETSC_HAVE_MPI_GET_LIBRARY_VERSION 1
+#define PETSC_HAVE_MPI_GPU_AWARE 1
+#define PETSC_HAVE_MPI_INIT_THREAD 1
+#define PETSC_HAVE_MPI_INT64_T 1
+#define PETSC_HAVE_MPI_LONG_DOUBLE 1
+#define PETSC_HAVE_MPI_NEIGHBORHOOD_COLLECTIVES 1
+#define PETSC_HAVE_MPI_NONBLOCKING_COLLECTIVES 1
+#define PETSC_HAVE_MPI_ONE_SIDED 1
+#define PETSC_HAVE_MPI_PERSISTENT_NEIGHBORHOOD_COLLECTIVES 1
+#define PETSC_HAVE_MPI_PROCESS_SHARED_MEMORY 1
+#define PETSC_HAVE_MPI_REDUCE_LOCAL 1
+#define PETSC_HAVE_MPI_REDUCE_SCATTER_BLOCK 1
+#define PETSC_HAVE_MPI_RGET 1
+#define PETSC_HAVE_MPI_WIN_CREATE 1
+#define PETSC_HAVE_NANOSLEEP 1
+#define PETSC_HAVE_NETDB_H 1
+#define PETSC_HAVE_NETINET_IN_H 1
+#define PETSC_HAVE_NO_FINITE_MATH_ONLY 1
+#define PETSC_HAVE_OPENMP 1
+#define PETSC_HAVE_OPENMPI 1
+#define PETSC_HAVE_PACKAGES ":blaslapack:cuda:f2cblaslapack:hdf5:kokkos:kokkos-kernels:mathlib:mpi:openmp:openmp:pthread:x11:"
+#define PETSC_HAVE_POPEN 1
+#define PETSC_HAVE_POSIX_MEMALIGN 1
+#define PETSC_HAVE_PTHREAD 1
+#define PETSC_HAVE_PTHREAD_MUTEX 1
+#define PETSC_HAVE_PWD_H 1
+#define PETSC_HAVE_RAND 1
+#define PETSC_HAVE_READLINK 1
+#define PETSC_HAVE_REALPATH 1
+#define PETSC_HAVE_REAL___FLOAT128 1
+#define PETSC_HAVE_RTLD_GLOBAL 1
+#define PETSC_HAVE_RTLD_LAZY 1
+#define PETSC_HAVE_RTLD_LOCAL 1
+#define PETSC_HAVE_RTLD_NOLOAD 1
+#define PETSC_HAVE_RTLD_NOW 1
+#define PETSC_HAVE_SETJMP_H 1
+#define PETSC_HAVE_SHMGET 1
+#define PETSC_HAVE_SLEEP 1
+#define PETSC_HAVE_SNPRINTF 1
+#define PETSC_HAVE_SOCKET 1
+#define PETSC_HAVE_SO_REUSEADDR 1
+#define PETSC_HAVE_STDATOMIC_H 1
+#define PETSC_HAVE_STDINT_H 1
+#define PETSC_HAVE_STRCASECMP 1
+#define PETSC_HAVE_STRINGS_H 1
+#define PETSC_HAVE_STRUCT_SIGACTION 1
+#define PETSC_HAVE_SYS_PARAM_H 1
+#define PETSC_HAVE_SYS_PROCFS_H 1
+#define PETSC_HAVE_SYS_RESOURCE_H 1
+#define PETSC_HAVE_SYS_SOCKET_H 1
+#define PETSC_HAVE_SYS_TIMES_H 1
+#define PETSC_HAVE_SYS_TIME_H 1
+#define PETSC_HAVE_SYS_TYPES_H 1
+#define PETSC_HAVE_SYS_UTSNAME_H 1
+#define PETSC_HAVE_SYS_WAIT_H 1
+#define PETSC_HAVE_TAU_PERFSTUBS 1
+#define PETSC_HAVE_TGAMMA 1
+#define PETSC_HAVE_TIME 1
+#define PETSC_HAVE_TIME_H 1
+#define PETSC_HAVE_UNAME 1
+#define PETSC_HAVE_UNISTD_H 1
+#define PETSC_HAVE_USLEEP 1
+#define PETSC_HAVE_VA_COPY 1
+#define PETSC_HAVE_VSNPRINTF 1
+#define PETSC_HAVE_X 1
+#define PETSC_HAVE_XMMINTRIN_H 1
+#define PETSC_HDF5_HAVE_PARALLEL 1
+#define PETSC_INTPTR_T intptr_t
+#define PETSC_INTPTR_T_FMT "#" PRIxPTR
+#define PETSC_IS_COLORING_MAX USHRT_MAX
+#define PETSC_IS_COLORING_VALUE_TYPE short
+#define PETSC_IS_COLORING_VALUE_TYPE_F integer2
+#define PETSC_LEVEL1_DCACHE_LINESIZE 64
+#define PETSC_LIB_DIR "/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib"
+#define PETSC_LIB_NAME_SUFFIX ""
+#define PETSC_MAX_PATH_LEN 4096
+#define PETSC_MEMALIGN 16
+#define PETSC_MPICC_SHOW "gcc -I/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include -L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib -lmpi"
+#define PETSC_MPIU_IS_COLORING_VALUE_TYPE MPI_UNSIGNED_SHORT
+#define PETSC_OMAKE "/usr/bin/make --no-print-directory"
+#define PETSC_PKG_CUDA_MIN_ARCH 90
+#define PETSC_PREFETCH_HINT_NTA _MM_HINT_NTA
+#define PETSC_PREFETCH_HINT_T0 _MM_HINT_T0
+#define PETSC_PREFETCH_HINT_T1 _MM_HINT_T1
+#define PETSC_PREFETCH_HINT_T2 _MM_HINT_T2
+#define PETSC_PYTHON_EXE "/usr/bin/python3"
+#define PETSC_Prefetch(a,b,c) _mm_prefetch((const char*)(a),(c))
+#define PETSC_REPLACE_DIR_SEPARATOR '\\'
+#define PETSC_SIGNAL_CAST  
+#define PETSC_SIZEOF_INT 4
+#define PETSC_SIZEOF_LONG 8
+#define PETSC_SIZEOF_LONG_LONG 8
+#define PETSC_SIZEOF_SIZE_T 8
+#define PETSC_SIZEOF_VOID_P 8
+#define PETSC_SLSUFFIX "so"
+#define PETSC_UINTPTR_T uintptr_t
+#define PETSC_UINTPTR_T_FMT "#" PRIxPTR
+#define PETSC_UNUSED __attribute((unused))
+#define PETSC_USE_64BIT_INDICES 1
+#define PETSC_USE_AVX512_KERNELS 1
+#define PETSC_USE_CTABLE 1
+#define PETSC_USE_DEBUGGER "gdb"
+#define PETSC_USE_DMLANDAU_2D 1
+#define PETSC_USE_INFO 1
+#define PETSC_USE_ISATTY 1
+#define PETSC_USE_LOG 1
+#define PETSC_USE_MALLOC_COALESCED 1
+#define PETSC_USE_PROC_FOR_SIZE 1
+#define PETSC_USE_REAL_DOUBLE 1
+#define PETSC_USE_SHARED_LIBRARIES 1
+#define PETSC_USE_SINGLE_LIBRARY 1
+#define PETSC_USE_SOCKET_VIEWER 1
+#define PETSC_USE_VISIBILITY_C 1
+#define PETSC_USE_VISIBILITY_CXX 1
+#define PETSC_USING_64BIT_PTR 1
+#define PETSC__BSD_SOURCE 1
+#define PETSC__DEFAULT_SOURCE 1
+#define PETSC__GNU_SOURCE 1
+-----------------------------------------
+Using C compile: mpicc -o gmakeinfo -c -fPIC -Wall -Wwrite-strings -Wno-unknown-pragmas -Wno-lto-type-mismatch -Wno-stringop-overflow -fstack-protector -fvisibility=hidden -O3  
+mpicc -show: gcc -I/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include -L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib -lmpi
+C compiler version: gcc (GCC) 14.2.0
+Using C++ compile: mpicxx -o gmakeinfo -c -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -Wno-psabi -Wno-lto-type-mismatch -fstack-protector -fvisibility=hidden -O3  -std=gnu++20 -fPIC  -I/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5/include -I/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5/arch-bwuni3-h100-int64/include -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/include -I/opt/bwhpc/common/devel/cuda/12.8/include  -fopenmp 
+mpicxx -show: g++ -I/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include -L/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/lib -lmpi
+C++ compiler version: g++ (GCC) 14.2.0
+Using CUDA compile: /opt/bwhpc/common/devel/cuda/12.8/bin/nvcc -o gmakeinfo -c -I/software/bwhpc/common/mpi/openmpi/5.0.8-gnu-14.2/include  -ccbin mpicxx -std=c++20 -Xcompiler -fPIC -Xcompiler -fvisibility=hidden -O3 -gencode arch=compute_90,code=sm_90      --compiler-options="-I/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5/include -I/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5/arch-bwuni3-h100-int64/include -I/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/include -I/opt/bwhpc/common/devel/cuda/12.8/include  -fopenmp "
+-----------------------------------------
+Using C/C++ linker: mpicc
+Using C/C++ flags: -fopenmp   -fPIC -Wall -Wwrite-strings -Wno-unknown-pragmas -Wno-lto-type-mismatch -Wno-stringop-overflow -fstack-protector -fvisibility=hidden -O3
+-----------------------------------------
+Using system modules: compiler/gnu/14.2:mpi/openmpi/5.0-gnu-14.2:numlib/fftw/3.3.10_gnu_14.2_openmpi_5.0:devel/cuda/12.8
+Using mpi.h: # 1 "/software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/include/mpi.h" 1 3
+-----------------------------------------
+Using libraries: -Wl,-rpath,/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5/arch-bwuni3-h100-int64/lib -L/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5/arch-bwuni3-h100-int64/lib -Wl,-rpath,/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -L/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64/lib -Wl,-rpath,/opt/bwhpc/common/devel/cuda/12.8/lib64 -L/opt/bwhpc/common/devel/cuda/12.8/lib64 -L/opt/bwhpc/common/devel/cuda/12.8/lib64/stubs -lpetsc -lkokkoskernels -lf2clapack -lf2cblas -lkokkoscontainers -lkokkoscore -lkokkossimd -lhdf5_hl -lhdf5 -lm -lcudart -lnvToolsExt -lcufft -lcublas -lcusparse -lcusolver -lcurand -lcuda -lnvidia-ml -lX11 -lstdc++ -lquadmath
+------------------------------------------
+Using mpiexec: /software/bwhpc/common/mpi/openmpi/5.0-gnu-14.2/bin/mpiexec --oversubscribe
+------------------------------------------
+Using MAKE: /usr/bin/make
+Default MAKEFLAGS: MAKE_NP:48 MAKE_LOAD:166.4 MAKEFLAGS: --no-print-directory -- PETSC_DIR=/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5 PETSC_ARCH=arch-bwuni3-h100-int64
+==========================================
+/usr/bin/make --print-directory -f gmakefile -j48 -l166.4 --output-sync=recurse V= libs
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/null/drawnull.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dclear.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/x/drawopenx.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dcoor.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dellipse.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dflush.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dpause.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/bm/interface/bm.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/x/xioerr.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/drawregall.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dline.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dpoint.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dmouse.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/drect.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/tikz/tikz.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/axis.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dmarker.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/x/xtext.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/x/xtone.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dtext.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/x/xinit.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dsave.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/x/xcolor.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/draw.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/drawreg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/bars.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dtri.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/x/ximage.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/cmap.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/axisc.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/dscatter.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/interface/dviewp.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/bag/bag.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/image/drawimage.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/random/impls/rand/rand.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/random/interface/dlregisrand.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/image.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/random/impls/rander48/rander48.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/random/impls/rand48/rand48.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/random/interface/randreg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/random/interface/random.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/zoom.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/impls/x/xops.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/random/interface/randomc.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/lg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/ascii/vcreatea.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/pyvista/pyvistaviewer.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/python/pythonviewer.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/random/impls/curand/curand.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/draw/draw/fdrawv.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/hists.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/interface/dupl.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/string/stringv.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/interface/flush.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/interface/dlregispetsc.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/draw/utils/lgc.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/interface/viewa.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/vu/petscvu.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/vtk/vtkv.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/interface/viewers.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/hdf5/hdf5v.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/draw/drawv.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/interface/view.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/ascii/filev.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/interface/viewregall.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/utils/btview.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/glvis/glvis.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/error/checkptr.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/socket/send.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/error/errabort.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/dll/demangle.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/hdf5/impl/ihdf5v.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/dll/dlimpl.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/error/pstack.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/error/errstop.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/fpath.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/impls/binary/binv.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/dll/dl.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/ghome.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/error/errtrace.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/fwd.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/error/signal.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/classes/viewer/interface/viewreg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/smatlab.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/rpath.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/ftest.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/fdir.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/grpath.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/error/fp.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/error/adebug.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/dll/reg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/mpiuopen.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/handler/impls/legacy/loglegacy.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/fretrieve.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/impls/host/hostcontext.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/info/verboseinfo.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/impls/host/hostdevice.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/handler/impls/trace/logtrace.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/utils/stack.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/handler/interface/lhreg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/memory/mhbw.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/mprint.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/error/err.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/handler/interface/loghandler.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/handler/impls/perfstubs/logperfstubs.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/finit.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/device/util/devicereg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/memory/mal.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/gtype.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/fcallback.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/gcookie.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/state/logstate.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/destroy.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/memory/mem.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/gcomm.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/olist.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/device/util/memory.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/handler/impls/nested/xmlviewer.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/package.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/pgname.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/fileio/sysio.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/handler/impls/nested/lognested.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/state/logregistry.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/ptype.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/pname.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/prefix.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/state.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/garbage.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/version.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/inherit.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/perfstubs/pstimer.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/time/fdate.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/time/cputime.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/plog.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/arch.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/matheq.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/fuser.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/handler/impls/nvtx/lognvtx.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/totalview/tv_data_display.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/memory/mtr.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/mathclose.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/mathinf.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/python/pythonsys.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/impls/cupm/cupminterface.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/tagm.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/impls/cupm/cupmblasinterface.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/impls/cupm/cupmsolverinterface.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/memc.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/mathfit.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/mpitr.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/fhost.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/subcomm.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/init.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/pbarrier.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/mpishm.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/aoptions.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/mpiu.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/psleep.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/pdisplay.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/segbuffer.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/psplit.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/mpimesg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/sortd.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/interface/isregall.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/ao/interface/aoreg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/sortip.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/interface/isreg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/server.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/ao/interface/ao.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/interface/global_dcontext.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/utils/iscomp.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/interface/memory.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/ao/impls/mapping/aomapping.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/ao/impls/basic/aobasic.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/impls/stride/stride.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/pinit.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/str.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/mpits.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/interface/device.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/utils/isblock.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/interface/sfregi.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/interface/dlregissf.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/gather/sfgather.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/gatherv/sfgatherv.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/impls/block/block.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/allgather/sfallgather.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/cxx/memory/object_pool.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/alltoall/sfalltoall.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/utils/isdiff.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/utils/isio.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/interface/sftype.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/section/interface/hdf5/sectionhdf5.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/sfmpi.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/pf/impls/string/cstring.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/utils/sfcoord.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/ao/impls/memscalable/aomemscalable.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/impls/general/general.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/pf/interface/pfall.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/utils/iscoloring.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/impls/cupm/cupmdevice.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/pf/impls/constant/const.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/neighbor/sfneighbor.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/utils/pmap.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/mpi/commonmpvec.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/utils/hdf5/hdf5io.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/pf/interface/pf.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/sorti.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/mpi/vmpicr.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/allgatherv/sfallgatherv.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/mpi/pvec2.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/options.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/seq/bvec3.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/sfbasic.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/seq/bvec1.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/seq/vseqcr.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/shared/shvec.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/interface/dcontext.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/is/interface/index.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/utils/psort.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/utils/sortso.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/interface/vecregall.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/interface/veccreate.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/impls/absolute.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/window/sfwindow.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/interface/vecreg.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/logging/handler/impls/default/logdefault.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/interface/dlregistagger.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/impls/and.o
+        CXX arch-bwuni3-h100-int64/obj/src/sys/objects/device/interface/mark_dcontext.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/interface/dlregisvec.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/impls/or.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/impls/relative.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/utils/kdtree.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/impls/andor.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/interface/taggerregi.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/impls/simple.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/utils/sfutils.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/vecs.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/interface/tagger.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/vecglvis.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/mpi/pbvec.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/vecio.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/tagger/impls/cdf.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/seq/bvec2.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/vsection.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/seq/dvec2.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/comb.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/projection.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/coarsen/interface/scoarsen.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/minpack/numsrt.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/vecstash.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/minpack/degr.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/minpack/seq.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/minpack/setr.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/minpack/dsm.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/utils/isltog.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/nest/vecnest.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/minpack/slo.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/minpack/ido.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/coarsen/interface/coarsen.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/interface/matcoloringregi.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/power/power.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/natural/natural.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/mpi/pdvec.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/coarsen/impls/mis/mis.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/interface/matcoloring.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/degree.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/minpack/color.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/coarsen/impls/misk/misk.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/fndsep.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/utils/bipartite.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/fn1wd.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/fnroot.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/gen1wd.o
+         CC arch-bwuni3-h100-int64/obj/src/sys/objects/optionsyaml.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/utils/valid.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/gennd.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/interface/vector.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/genqmd.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/genrcm.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/qmdqt.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/qmdrch.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/qmdmrg.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/qmdupd.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/rcm.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/sp1wd.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/rootls.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/utils/weights.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/vscat.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/section/interface/section.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/spqmd.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/spnd.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/jp/jp.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/sprcm.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/sregis.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/spectral.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/wbm.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/interface/sf.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/order/sorder.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/color/impls/greedy/greedy.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/partition/spartition.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/aijperm/mpiaijperm.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/aijsell/mpiaijsell.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/utils/vinv.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpiaijpc.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpb_aij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/crl/mcrl.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpimatmatmatmult.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpimattransposematmult.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/partition/impls/hierarchical/hierarchical.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/partition/partition.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mumps/mumps.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/graphops/coarsen/impls/hem/hem.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/ij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/crl/crl.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/inode2.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/aijsell/aijsell.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/matmatmatmult.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/vec/interface/rvector.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/mattransposematmult.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mmaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/matptap.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/hdf5/aijhdf5.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/bas/basfactor.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/aijperm/aijperm.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/symtranspose.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/fdaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/matrart.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/mpi/mpiaijbaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/mpi/mpb_baij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/aijbaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijfact4.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijfact3.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat1.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/fdmpiaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat11.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/mpi/mmbaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/bas/spbas.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat3.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijfact13.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/adj/mpi/mpiadj.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat2.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat4.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat5.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijfact2.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat14.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat6.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtran1.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtran2.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijfact11.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat7.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtran3.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtran5.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/dgedi.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtran4.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/dgefa.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtrannat2.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtrannat1.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtran6.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijfact9.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtran7.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtrannat3.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/dgefa3.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtrannat4.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/dgefa4.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtrann.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtrannat5.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtrannat6.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/dgefa5.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijfact.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/dgefa6.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvtrannat7.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/centering/centering.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/dgefa7.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/dgefa2.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/fft/fft.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/dummy/matdummy.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijfact7.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/cdiagonal/cdiagonal.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/dense/seq/hdf5/densehdf5.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolv.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/mffd/mfregis.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/mffd/mffddef.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/localref/mlocalref.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/mffd/wp.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/lrc/lrc.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijsolvnat15.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/python/pythonmat.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/aijfact.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/composite/mcomposite.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/diagonal/diagonal.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/normal/normmh.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/dense/mpi/mmdense.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/mffd/mffd.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/mpi/mpiaijsbaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baijfact5.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/normal/normm.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/mpi/baijov.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/preallocator/matpreallocator.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/blockmat/seq/blockmat.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/matmatmult.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/mpi/mmsbaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/scatter/mscatter.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/aijsbaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact4.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sro.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpimatmatmult.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact10.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact3.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/mpi/sbaijov.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact5.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact8.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact6.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sell/seq/fdsell.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact11.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sell/mpi/mmsell.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact7.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact12.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact9.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/submat/submat.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/shell/shellcnv.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baij2.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/interface/matregis.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/interface/matreg.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/interface/matnull.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/interface/dlregismat.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/bandwidth.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/kaij/kaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/compressedrow.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/transpose/transm.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/transpose/htransm.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/convert.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/freespace.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/matfd/fdmatrix.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/getcolv.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/matio.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/isltog.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/matstashspace.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/dense/mpi/mpidense.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/pheap.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/veccreatematdense.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/zerodiag.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/interface/matproduct.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/axpy.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/zerorows.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/inode.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/overlapsplit.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpiptap.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/gcreate.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/multequal.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/nest/matnest.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaij2.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/mpi/mpibaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpiov.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/utils/matstash.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/shell/shell.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/dualspace/impls/refined/dualspacerefined.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/dualspace/impls/simple/dspacesimple.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/maij/maij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sell/mpi/mpisell.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sell/seq/sell.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/dense/seq/dense.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/fe/impls/composite/fecomposite.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/fe/impls/vector/fevector.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/fe/interface/fegeom.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/aij.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/interface/dtprob.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/space/impls/point/spacepoint.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaijfact2.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/space/impls/poly/spacepoly.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/is/matis.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/space/impls/ptrimmed/spaceptrimmed.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/space/interface/space.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/seq/sbaij.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/sbaij/mpi/mpisbaij.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/space/impls/wxy/spacewxy.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/dualspace/impls/sum/dualspacesum.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/field/interface/dlregisdmfield.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/space/impls/sum/spacesum.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/field/interface/dmfieldregi.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/fv/interface/fv.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/dualspace/interface/dualspace.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/baij/seq/baij.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/field/impls/shell/dmfieldshell.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/field/interface/dmfield.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/sys/classes/random/impls/curand/curand2.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/sys/classes/random/impls/curand/curand2.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/field/impls/da/dmfieldda.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/composite/packm.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/space/impls/tensor/spacetensor.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/space/impls/subspace/spacesubspace.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dacorn.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/interface/dtaltv.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dadist.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dadestroy.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/interface/dtweakform.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/da1.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dageometry.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dacreate.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/daghost.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dagetarray.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dagtol.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dagtona.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dapf.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dapreallocate.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dagetelem.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dadd.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/da.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/daindex.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/daltol.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dareg.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/fe/impls/basic/febasic.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dascatter.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/composite/pack.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dalocal.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/daview.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/interface/dtds.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/fe/interface/fe.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/da2.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dasub.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/patch/patchcreate.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/network/networkmonitor.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexcgns.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/gr1.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/patch/patch.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/network/networkview.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexcoarsen.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/network/networkcreate.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/hdf5/plexhdf5xdmf.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexceed.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexadapt.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/forest/forest.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/grglvis.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/sys/memory/cuda/mcudahost.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/sys/memory/cuda/mcudahost.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexegads.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/grvtk.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexexodusii.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexcheckinterface.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/dainterp.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexdd.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexextrude.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexgenerate.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/gr2.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/interface/dt.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexfvm.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexindices.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/field/impls/ds/dmfieldds.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/da3.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexpoint.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexply.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/dt/dualspace/impls/lagrange/dspacelagrange.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexnatural.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexrefine.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpiaij.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexvtk.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexfluent.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/pointqueue.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexreorder.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexsection.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/filter/plextrfilter.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/refine/1d/plexref1d.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexmetric.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/refine/alfeld/plexrefalfeld.o
+         CC arch-bwuni3-h100-int64/obj/src/mat/interface/matrix.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexglvis.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexpreallocate.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexproject.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/extrude/plextrcohesive.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/refine/regular/plexrefregular.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/refine/tobox/plexreftobox.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/refine/tosimplex/plexreftosimplex.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/product/product.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/refine/sbr/plexrefsbr.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/product/productutils.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/refine/bl/plexrefbl.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexdistribute.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/impls/extrude/plextrextrude.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexorient.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexpartition.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/da/fdda.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/sliced/sliced.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexvtu.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/shell/dmshell.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/network/network.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/redundant/dmredundant.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/stag/stagintern.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/stag/stagstencil.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/stag/stag1d.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/stag/stagda.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexinterpolate.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/hdf5/plexhdf5.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/swarm/swarmpic_da.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/swarm/swarmpic_sort.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexsfc.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/stag/stag.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/swarm/swarmpic_plex.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dmceed.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/swarm/data_bucket.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/swarm/swarmpic_view.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dlregisdmdm.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/stag/stagutils.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dmgenerate.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/swarm/data_ex.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dmgeommodel.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/swarm/swarm_migrate.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dmglvis.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/label/impls/ephemeral/plex/dmlabelephplex.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/impls/chaco/partchaco.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/impls/gather/partgather.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dmget.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dmregall.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/impls/parmetis/partparmetis.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/label/impls/ephemeral/dmlabeleph.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/impls/ptscotch/partptscotch.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/impls/matpart/partmatpart.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/swarm/swarmpic.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dmcoordinates.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/interface/partitionerreg.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/impls/shell/partshell.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dmperiodicity.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/interface/partitioner.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/transform/interface/plextransform.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dmi.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/stag/stag2d.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/impls/simple/partsimple.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/bcgs/bcgs.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/bcgs/fbcgs/fbcgs.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/bcgs/qmrcgs/qmrcgs.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/cgeig.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/guess/impls/fischer/fischer.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/partitioner/impls/multistage/mspart.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/bcgs/fbcgsr/fbcgsr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/cgls.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/bcgs/pipebcgs/pipebcgs.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/bicg/bicg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/guess/impls/pod/pod.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/cgtype.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexgeometry.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/bcgsl/bcgsl.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/groppcg/groppcg.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/mpi/cupm/cuda/vecmpicupm.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/vec/vec/impls/mpi/cupm/cuda/vecmpicupm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/cgne/cgne.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/pipecg/pipecg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cheby/betas.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/nash/nash.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/swarm/swarm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cgs/cgs.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/pipeprcg/pipeprcg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/stcg/stcg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/pipecgrr/pipecgrr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cr/cr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cr/pipecr/pipecr.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexsubmesh.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/pipelcg/pipelcg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/gltr/gltr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/agmres/agmresleja.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/pipecg2/pipecg2.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/borthog.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gcr/gcr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cg/cg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/agmres/agmresdeflation.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexgmsh.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/fcg/fcg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/fcg/pipefcg/pipefcg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/borthog2.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/fgmres/modpcf.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plextree.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gcr/pipegcr/pipegcr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/gmpre.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/cheby/cheby.o
+        CXX arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/dense/cd_cupm/cd_cupm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/gmres2.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/agmres/agmresorthog.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/stag/stagmulti.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/fgmres/fgmres.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/gmreig.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/python/pythonksp.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/label/dmlabel.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/rich/richscale.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/preonly/preonly.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/pgmres/pgmres.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/agmres/agmres.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/lgmres/lgmres.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/lcd/lcd.o
+        CXX arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/blas_cyclic/cupm/blas_cyclic_cupm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/qcg/qcg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/lsqr/lsqr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/pipefgmres/pipefgmres.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/ibcgs/ibcgs.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/symmlq/symmlq.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/rich/rich.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/gmres.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/tcqmr/tcqmr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/tfqmr/tfqmr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/dlregisksp.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/dmksp.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/fetidp/fetidp.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/iguess.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/tsirm/tsirm.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/mat/impls/sell/mpi/mpicuda/mpisellcuda.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/mat/impls/sell/mpi/mpicuda/mpisellcuda.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/itres.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/eige.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/xmon.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/itregis.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/kspmatregi.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/itcreate.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/gmres/dgmres/dgmres.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/dense/cd_utils.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/diagbrdn/diagbrdn.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/itcl.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/brdn/badbrdn.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/bfgs/bfgs.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/dfp/dfp.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/brdn/brdn.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/impls/minres/minres.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/symbrdn/symbadbrdn.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/lmvmimpl.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/sr1/sr1.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/lmbasis.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/lmproducts.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/iterativ.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/rescale/symbrdnrescale.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexcreate.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/cp/cp.o
+       KOKC arch-bwuni3-h100-int64/obj/src/sys/objects/kokkos/kinit.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bddc/bddcnullspace.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/interface/dm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/composite/composite.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/schurm/schurm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/lmvmutils.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/factor/icc/icc.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/interface/itfunc.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/stag/stag3d.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/factor/cholesky/cholesky.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/eisens/eisen.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/deflation/deflation.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/blas_cyclic/blas_cyclic.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/factor/factimpl.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/factor/ilu/ilu.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/factor/factor.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/symbrdn/symbrdn.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/factor/qr/qr.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bddc/bddcscalingbasic.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/factor/lu/lu.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/lmvm/dense/denseqn.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/deflation/deflationspace.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/galerkin/galerkin.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/gamg/util.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/hypre/hypre.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/kaczmarz/kaczmarz.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/lmvm/lmvmpc.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/mat/pcmat.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/ksp/pcksp.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/jacobi/jacobi.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/ksp/utils/dm/dmproject.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/gamg/geo.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/hmg/hmg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/lsc/lsc.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bjacobi/bjacobi.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/is/nn/nn.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/mg/fmg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bddc/bddcfetidp.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/mg/smg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/none/none.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/is/pcis.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/asm/asm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/mg/mgadapt.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/python/pythonpc.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/mg/mgfunc.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plexfem.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/spai/ispai.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/mg/gdsw.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bddc/bddcgraph.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/gamg/classical.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/sor/sor.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/tfs/bitmask.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/shell/shellpc.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/redundant/redundant.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/pbjacobi/pbjacobi.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/svd/svd.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/tfs/tfs.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/telescope/telescope_coarsedm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/interface/pcregis.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/interface/pcset.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/redistribute/redistribute.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/sys/objects/device/impls/cupm/cuda/cupmcontext.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/sys/objects/device/impls/cupm/cuda/cupmcontext.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/vpbjacobi/vpbjacobi.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/tfs/ivec.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/tfs/comm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/tfs/xxt.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/gasm/gasm.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bddc/bddc.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/tfs/xyt.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/tfs/gs.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/fas/fasgalerkin.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/mpi/pcmpi.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/telescope/telescope.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/gamg/agg.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/mat/impls/sell/seq/seqcuda/sellcuda.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/mat/impls/sell/seq/seqcuda/sellcuda.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/ksponly/ksponly.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/gs/gssecant.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/gs/snesgs.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/fas/fasfunc.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/nasm/aspin.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/gamg/gamg.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/telescope/telescope_dmda.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/ls/ls.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/al/al.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/composite/snescomposite.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/interface/precon.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/ms/ms.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/python/pythonsnes.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/ngmres/anderson.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/ncg/snesncg.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/ngmres/ngmresfunc.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/mg/mg.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/multiblock/multiblock.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/shell/snesshell.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/richardson/snesrichardson.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/wb/wb.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/ngmres/snesngmres.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/ntrdc/ntrdc.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/fas/fas.o
+         CC arch-bwuni3-h100-int64/obj/src/dm/impls/plex/plex.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/noise/snesdnest.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/dlregissnes.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/patch/snespatch.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/qn/qn.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/vi/ss/viss.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/snesj.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/nasm/nasm.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/snesj2.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/snespc.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/noise/snesmfj2.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/noise/snesnoise.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/snesregi.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/snesob.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/linesearch/impls/basic/linesearchbasic.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/vi/rs/virs.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/vi/vi.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/linesearch/impls/bisection/linesearchbisection.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/linesearch/impls/shell/linesearchshell.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/linesearch/interface/linesearchregi.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/linesearch/impls/cp/linesearchcp.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/linesearch/impls/nleqerr/linesearchnleqerr.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/linesearch/impls/secant/linesearchsecant.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/impls/tr/tr.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/mf/snesmfj.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/adapt/impls/cfl/adaptcfl.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/linesearch/impls/bt/linesearchbt.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/snesut.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/adapt/impls/basic/adaptbasic.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/adapt/impls/none/adaptnone.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/linesearch/interface/linesearch.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/adapt/impls/glee/adaptglee.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/adapt/impls/history/adapthist.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/utils/dmsnes.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/characteristic/interface/mocregis.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/utils/dmlocalsnes.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/adapt/impls/dsp/adaptdsp.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/characteristic/impls/da/slda.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/characteristic/interface/slregis.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/utils/dmdasnes.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/utils/convest.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/adapt/interface/tsadapt.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/explicit/euler/euler.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/eimex/eimex.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/implicit/glle/glleadapt.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/fieldsplit/fieldsplit.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/explicit/ssp/ssp.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/bdf/bdf.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bddc/bddcschurs.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/event/tsevent.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/implicit/alpha/alpha1.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/utils/dmplexsnes.o
+       KOKC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/mpi/kokkos/mpikok.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/implicit/alpha/alpha2.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/implicit/discgrad/tsdiscgrad.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/arkimex/fsarkimex.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/utils/dm/dminterpolatesnes.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/utils/dm/dmadapt.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/mimex/mimex.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/python/pythonts.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/explicit/rk/mrk.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/characteristic/interface/characteristic.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/dlregists.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/tscreate.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/tsreg.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/tsregall.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/symplectic/basicsymplectic/basicsymplectic.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/implicit/irk/irk.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/glee/glee.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/pseudo/posindep.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/tshistory.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/tseig.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/trajectory/impls/singlefile/singlefile.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/trajectory/impls/visualization/trajvisualization.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/tsrhssplit.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/explicit/rk/rk.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/trajectory/impls/basic/trajbasic.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/sensitivity/tssen.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/trajectory/utils/reconstruct.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/utils/dmnetworkts.o
+         CC arch-bwuni3-h100-int64/obj/src/snes/interface/snes.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/arkimex/arkimex.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bnk/bnls.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/utils/dmdats.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/implicit/theta/theta.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/multirate/mprk.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bnk/bntr.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bnk/bntl.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/blmvm/blmvm.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/trajectory/interface/traj.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/utils/dmlocalts.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bqnk/bqnkls.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/rosw/rosw.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/utils/dmplexts.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/utils/tsconvest.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bqnk/bqnk.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/utils/dmts.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/tsmon.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bqnk/bqnktl.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bqnk/bqnktr.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bqnls/bqnls.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/trajectory/impls/memory/trajmemory.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/complementarity/impls/ssls/ssls.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/complementarity/impls/asls/asfls.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/complementarity/impls/ssls/ssils.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/complementarity/impls/ssls/ssfls.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/interface/dlregistao.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/complementarity/impls/asls/asils.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/constrained/impls/almm/almmutils.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/utils/isutil.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/tron/tron.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bncg/bncg.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/interface/taosolver_bounds.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/interface/fdiff.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/bound/impls/bnk/bnk.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/interface/taosolverregi.o
+       KOKC arch-bwuni3-h100-int64/obj/src/mat/impls/diagonal/kokkos/matdiagonalkokkos.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/interface/taosolver_fg.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/impls/implicit/glle/glle.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/linesearch/impls/unit/unit.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/interface/taosolver_hj.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/constrained/impls/almm/almm.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/linesearch/interface/dlregis_taolinesearch.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/linesearch/impls/gpcglinesearch/gpcglinesearch.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/leastsquares/impls/pounders/gqt.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/python/pythontao.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/linesearch/impls/armijo/armijo.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/constrained/impls/admm/admm.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/matrix/adamat.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/shell/taoshell.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/linesearch/impls/morethuente/morethuente.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/linesearch/impls/owarmijo/owarmijo.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/leastsquares/impls/brgn/brgn.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/snes/taosnes.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/matrix/submatfree.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/linesearch/interface/taolinesearch.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/quadratic/impls/gpcg/gpcg.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/impls/halfl2squared/taotermhalfl2squared.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/interface/taotermregi.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/utils/taotermelementwise.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/constrained/impls/ipm/ipm.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/quadratic/impls/bqpip/bqpip.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/impls/shell/taotermshell.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/utils/taotermutils.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/impls/quadratic/taotermquadratic.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/impls/callbacks/taotermcallbacks.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/impls/l1/taoterml1.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/utils/taotermfdiff.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/interface/taosolver.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/interface/ts.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/unconstrained/impls/cg/taocg.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/pde_constrained/impls/lcl/lcl.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/unconstrained/impls/lmvm/lmvm.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/unconstrained/impls/neldermead/neldermead.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/util/softthreshold.o
+         CC arch-bwuni3-h100-int64/obj/src/ml/regressor/interface/dlregisregressor.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/utils/taotermmapping.o
+         CC arch-bwuni3-h100-int64/obj/src/ml/regressor/interface/regressorregi.o
+         CC arch-bwuni3-h100-int64/obj/src/ml/da/interface/petscda.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/unconstrained/impls/owlqn/owlqn.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/patch/pcpatch.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/util/tao_util.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/constrained/impls/ipm/pdipm.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/impls/sum/taotermsum.o
+         CC arch-bwuni3-h100-int64/obj/src/ml/regressor/impls/linear/linear.o
+         CC arch-bwuni3-h100-int64/obj/src/ml/da/impls/ensemble/etkf/etkfilter.o
+         CC arch-bwuni3-h100-int64/obj/src/ml/regressor/interface/regressor.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/unconstrained/impls/ntr/ntr.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/term/interface/taoterm.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/unconstrained/impls/ntl/ntl.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/unconstrained/impls/bmrm/bmrm.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/unconstrained/impls/nls/nls.o
+         CC arch-bwuni3-h100-int64/obj/src/ml/da/impls/ensemble/daensemble.o
+         CC arch-bwuni3-h100-int64/obj/src/ml/da/impls/ensemble/letkf/letkfilter.o
+         CC arch-bwuni3-h100-int64/obj/src/tao/leastsquares/impls/pounders/pounders.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpicusparse/mpiaijcusparse.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/mpicusparse/mpiaijcusparse.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/mat/impls/dense/mpi/cupm/cuda/matmpidensecuda.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/mat/impls/dense/mpi/cupm/cuda/matmpidensecuda.o
+         CC arch-bwuni3-h100-int64/obj/src/ts/utils/dmplexlandau/plexland.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/mat/impls/diagonal/cupm/cuda/matdiagonalcuda.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/mat/impls/diagonal/cupm/cuda/matdiagonalcuda.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/pbjacobi/cuda/pbjacobi_cuda.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/pbjacobi/cuda/pbjacobi_cuda.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/vpbjacobi/cuda/vpbjacobi_cuda.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/vpbjacobi/cuda/vpbjacobi_cuda.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/mat/impls/dense/seq/cupm/cuda/matseqdensecuda.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/mat/impls/dense/seq/cupm/cuda/matseqdensecuda.o
+         CC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bddc/bddcprivate.o
+       KOKC arch-bwuni3-h100-int64/obj/src/dm/impls/da/kokkos/dagetov.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/cupm/cuda/sfcupm.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/cupm/cuda/sfcupm.o
+       KOKC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bjacobi/bjkokkos/bjkokkoskernels.o
+       KOKC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/pbjacobi/kokkos/pbjacobi_kok.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/seqcusparse/aijcusparse.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/seqcusparse/aijcusparse.o
+       KOKC arch-bwuni3-h100-int64/obj/src/ts/utils/dmplexlandau/kokkos/landau.o
+       KOKC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/vpbjacobi/kokkos/vpbjacobi_kok.o
+       KOKC arch-bwuni3-h100-int64/obj/src/ml/da/impls/ensemble/letkf/kokkos/dalocalizationletkf.o
+         CC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/sfpack.o
+       KOKC arch-bwuni3-h100-int64/obj/src/ksp/pc/impls/bjacobi/bjkokkos/bjkokkos.o
+       KOKC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/seq/kokkos/veckok.o
+       KOKC arch-bwuni3-h100-int64/obj/src/ml/da/impls/ensemble/letkf/kokkos/letkf_local_analysis.o
+       KOKC arch-bwuni3-h100-int64/obj/src/vec/is/sf/impls/basic/kokkos/sfkok.o
+       KOKC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/mpi/kokkos/mpiaijkok.o
+      CUDAC arch-bwuni3-h100-int64/obj/src/vec/vec/impls/seq/cupm/cuda/vecseqcupm.o
+  CUDAC.dep arch-bwuni3-h100-int64/obj/src/vec/vec/impls/seq/cupm/cuda/vecseqcupm.o
+       KOKC arch-bwuni3-h100-int64/obj/src/mat/impls/aij/seq/kokkos/aijkok.o
+    CLINKER arch-bwuni3-h100-int64/lib/libpetsc.so.3.25.5
+=========================================
+Now to install the libraries do:
+make PETSC_DIR=/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5 PETSC_ARCH=arch-bwuni3-h100-int64 install
+=========================================
+== make install  Tue Sep 29 04:28:26 PM CEST 2026
+*** Installing PETSc at prefix location: /home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64  ***
+====================================
+To check if the libraries are working do (in current directory):
+make PETSC_DIR=/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64 PETSC_ARCH="" check
+====================================
+/usr/bin/make --no-print-directory -f makefile PETSC_ARCH=arch-bwuni3-h100-int64 PETSC_DIR=/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5 PETSC_INSTALL=install install-builtafterpetsc
+*** Install of PETSc (and any other packages) complete ***
+== make check (installed)  Tue Sep 29 04:28:59 PM CEST 2026
+Running PETSc check examples to verify correct installation
+Using PETSC_DIR=/home/hd/hd_hd/hd_pn277/opt/petsc-3.25.5-gnu14.2-cuda-int64 and PETSC_ARCH=
+C/C++ example src/snes/tutorials/ex19 run successfully with 1 MPI process
+C/C++ example src/snes/tutorials/ex19 run successfully with 2 MPI processes
+[0]PETSC ERROR: PETSc is configured with GPU support, but your MPI is not GPU-aware. For better performance, please use a GPU-aware MPI.
+[0]PETSC ERROR: If you do not care, add option -use_gpu_aware_mpi 0. To not see the message again, add the option to your .petscrc, OR add it to the env var PETSC_OPTIONS.
+[0]PETSC ERROR: For Open MPI, you need to configure it with CUDA, ROCm or GPU-aware UCX (https://docs.open-mpi.org/en/main/tuning-apps/accelerators/index.html)
+[0]PETSC ERROR: If you already configured it with GPU-aware UCX, you may need 'mpiexec -n <np> --mca pml ucx' or export 'OMPI_MCA_pml="ucx"' to use it.
+[0]PETSC ERROR: For MVAPICH2-GDR, you need to set MV2_USE_CUDA=1 (http://mvapich.cse.ohio-state.edu/userguide/gdr/)
+[0]PETSC ERROR: For Cray-MPICH, export MPICH_GPU_SUPPORT_ENABLED=1 (see its 'man mpi'); for MPICH, export MPIR_CVAR_ENABLE_GPU=1
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_SELF
+  Proc: [[26719,1],0]
+  Errorcode: 76
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+prterun has exited due to process rank 0 with PID 0 on node uc3n074 calling
+"abort". This may have caused other processes in the application to be
+terminated by signals sent by prterun (as reported here).
+--------------------------------------------------------------------------
+ make[3]: [makefile:95: runex19_cuda] Error 76 (ignored)
+make[3]: [makefile:96: runex19_cuda] Error 1 (ignored)
+/pfs/work9/workspace/scratch/hd_pn277-super/petsc-build/petsc-3.25.5/src/snes/tutorials
+Possible problem with ex19 running with CUDA
+=========================================
+lid velocity = 0.0625, prandtl # = 1., grashof # = 1.
+C/C++ example src/snes/tutorials/ex3k run successfully with Kokkos Kernels
+C/C++ example src/vec/vec/tests/ex47 run successfully with HDF5
+Completed PETSc check examples
+Error while running make check
+make[1]: *** [makefile:127: check_body] Error 1
+make: *** [GNUmakefile:17: check] Error 2
+make check FAILED
+== done  Tue Sep 29 04:29:20 PM CEST 2026
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc3n074
+Job ID: 7356900
+Cluster: uc3
+User/Group: hd_pn277/hd_hd
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 48
+CPU Utilized: 02:59:25
+CPU Efficiency: 32.46% of 09:12:48 core-walltime
+Job Wall-clock time: 00:11:31
+Memory Utilized: 24.07 GB
+Memory Efficiency: 25.07% of 96.00 GB (96.00 GB/node)

@@ -17,6 +17,11 @@ class measurer_output {
 public:
   virtual ~measurer_output() { ; }
   virtual void save(const std::string &what) = 0;
+  // Optional secondary outputs on their own save cadence. Backends that do not
+  // implement them (e.g. the text backend) fall back to these no-op defaults.
+  virtual void save_topcharge(const std::string &what) {}
+  virtual void save_field_spectra(const std::string &what) {}
+  virtual void save_coarsening(const std::string &what) {}
 };
 
 ////////////////////////////////////////////////////////////////////////
@@ -48,6 +53,12 @@ public:
   ~measurer_output_fasthdf5();
   //  Computes the contents of the data from measurer to the output file
   virtual void save(const std::string &what = "") override;
+  virtual void save_topcharge(const std::string &what = "") override;
+  virtual void save_field_spectra(const std::string &what = "") override;
+  virtual void save_coarsening(const std::string &what = "") override;
+  // Diffusion time tau of the last coarsening spectrum (and tau/dt), and
+  // the start time t_start of its coarsening
+  void save_coarsening_time(double tau, double step, double t_start);
 
 private:
   Measurer *measure;
@@ -84,6 +95,44 @@ private:
   std::unique_ptr<ntuple<3>> wallx_phase_k;
   std::unique_ptr<ntuple<3>> wally_phase_k;
   std::unique_ptr<ntuple<3>> wallz_phase_k;
+  
+  // Spherically-averaged Fourier readout of the topological charge density.
+  // topcharge_Sk is a time series (one row per save).  The zero mode is stored
+  // as [real, imag].  The (time independent) |k| bin centers and per-shell mode
+  // counts are written once.  The FFT normalization and radial binning are
+  // recorded as string attributes on the file (see the constructor).
+  std::unique_ptr<ntuple<1>> topcharge_sk;
+  std::unique_ptr<ntuple<1>> topcharge_zero;
+  std::unique_ptr<ntuple<1>> topcharge_kbins;
+  std::unique_ptr<ntuple<1>> topcharge_nshell;
+  bool topcharge_static_written = false;
+
+  // Radially binned 3D spectra of the transverse fields pi_a and A_a.
+  // Per-bin power spectra and cross-spectrum, written each save.
+  // Bin edges, mean |k| and mode counts written once.
+  std::unique_ptr<ntuple<1>> fields_Pphi;
+  std::unique_ptr<ntuple<1>> fields_PAA;
+  std::unique_ptr<ntuple<1>> fields_ReC;
+  std::unique_ptr<ntuple<1>> fields_PVV; // only with vector_spectra
+  std::unique_ptr<ntuple<1>> fields_time;
+  std::unique_ptr<ntuple<1>> fields_kbins;
+  std::unique_ptr<ntuple<1>> fields_nshell;
+  std::unique_ptr<ntuple<1>> fields_bin_edges;
+  bool fields_static_written = false;
+
+  // Coarsening: same format as field spectra, separate datasets.
+  // Also records the diffusion time of each spectrum.
+  std::unique_ptr<ntuple<1>> coarsen_Pphi;
+  std::unique_ptr<ntuple<1>> coarsen_PAA;
+  std::unique_ptr<ntuple<1>> coarsen_ReC;
+  std::unique_ptr<ntuple<1>> coarsen_PVV; // only with vector_spectra
+  std::unique_ptr<ntuple<1>> coarsen_step; // tau / dt (not an integer)
+  std::unique_ptr<ntuple<1>> coarsen_time; // diffusion time tau
+  std::unique_ptr<ntuple<1>> coarsen_tstart; // start of its coarsening
+  std::unique_ptr<ntuple<1>> coarsen_kbins;
+  std::unique_ptr<ntuple<1>> coarsen_nshell;
+  std::unique_ptr<ntuple<1>> coarsen_bin_edges;
+  bool coarsen_static_written = false;
 };
 #endif
 #endif
